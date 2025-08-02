@@ -194,20 +194,25 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             } : {}}
             onClick={() => handleAnswerSelect(index)}
             disabled={selectedAnswer !== null}
-            className={`w-4/5 max-w-lg rounded-2xl text-center relative overflow-hidden kawaii-button-emotional kawaii-magnetic ${selectedAnswer !== null ? 'cursor-not-allowed' : 'cursor-pointer'} transition-all duration-300 ease-out`}
+            className={`w-3/4 max-w-md rounded-2xl text-center relative overflow-hidden kawaii-button-emotional kawaii-magnetic ${selectedAnswer !== null ? 'cursor-not-allowed' : 'cursor-pointer'} transition-all duration-300 ease-out`}
             style={{
               ...getOptionStyle(index),
-              marginBottom: index < question.options.length - 1 ? '12px' : '0px'
+              marginBottom: index < question.options.length - 1 ? '12px' : '0px',
+              minHeight: '36px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
           >
             {/* Option text - readable design */}
-            <div className="py-2.5 px-4">
+            <div className="py-2 px-4">
               <span
                 className="font-bold text-white drop-shadow-lg"
                 style={{
                   fontFamily: "'Bubblegum Sans', 'Kalam', 'Fredoka', sans-serif !important",
                   fontWeight: 'bold !important',
-                  fontSize: '16px !important'
+                  fontSize: '16px !important',
+                  lineHeight: '1.4'
                 }}
               >
                 {option.replace(/\s*\([^)]*\)/g, '')}
