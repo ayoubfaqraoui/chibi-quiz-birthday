@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&family=Comfortaa:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&family=Kalam:wght@300;400;700&family=Bubblegum+Sans&family=Righteous&family=Bungee&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Bubblegum Sans', 'Kalam', 'Fredoka', 'Comfortaa', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Cool Anime Chibi Background */
+.anime-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sakura Petal Styles */
+.sakura-petal {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(45deg, #FFB6C1, #FFC0CB);
+  border-radius: 50% 0 50% 0;
+  opacity: 0.8;
+  pointer-events: none;
+  transform-origin: center;
+  filter: drop-shadow(0 2px 4px rgba(255, 182, 193, 0.3));
+}
+
+.sakura-petal::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #FFC0CB, #FFE4E1);
+  border-radius: 0 50% 0 50%;
+  transform: rotate(45deg);
+}
+
+/* Sakura petal color variations */
+.sakura-petal:nth-child(3n) {
+  background: linear-gradient(45deg, #DDA0DD, #E6E6FA);
+}
+
+.sakura-petal:nth-child(3n)::before {
+  background: linear-gradient(45deg, #E6E6FA, #F8F8FF);
+}
+
+.sakura-petal:nth-child(5n) {
+  background: linear-gradient(45deg, #F0E68C, #FFFACD);
+}
+
+.sakura-petal:nth-child(5n)::before {
+  background: linear-gradient(45deg, #FFFACD, #FFEFD5);
+}
+
+/* Sakura Animation Variants */
+.sakura-fall-1 {
+  animation: sakuraFall1 15s linear infinite;
+}
+
+.sakura-fall-2 {
+  animation: sakuraFall2 18s linear infinite;
+}
+
+.sakura-fall-3 {
+  animation: sakuraFall3 12s linear infinite;
+}
+
+@keyframes sakuraFall1 {
+  0% {
+    transform: translateY(-100px) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sakuraFall2 {
+  0% {
+    transform: translateY(-100px) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100vh) translateX(-80px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sakuraFall3 {
+  0% {
+    transform: translateY(-100px) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+/* Cool Anime Floating Animation */
+@keyframes animeFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(2deg); }
+  50% { transform: translateY(-5px) rotate(-1deg); }
+  75% { transform: translateY(-15px) rotate(1deg); }
+}
+
+/* Anime Glow Effect */
+@keyframes animeGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(240, 147, 251, 0.6), 0 0 60px rgba(245, 87, 108, 0.4); }
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Kawaii Scalloped Frame Styles */
+.kawaii-frame {
+  position: relative;
+  background: linear-gradient(145deg, rgba(255, 182, 193, 0.9), rgba(255, 192, 203, 0.8));
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow:
+    0 8px 32px rgba(255, 182, 193, 0.3),
+    inset 0 2px 8px rgba(255, 255, 255, 0.4);
+}
+
+.kawaii-frame::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #FFB6C1, #DDA0DD, #98FB98, #F0E68C);
+  border-radius: 28px;
+  z-index: -1;
+  animation: kawaii-border-glow 3s ease-in-out infinite;
+}
+
+.kawaii-frame::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 30%, transparent 70%);
+  border-radius: 50%;
+  animation: sparkle-shine 2s ease-in-out infinite;
+}
+
+@keyframes kawaii-border-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes sparkle-shine {
+  0%, 100% { opacity: 0.3; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+/* Scalloped Edge Effect */
+.scalloped-edge {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.95), rgba(221, 160, 221, 0.9));
+  border-radius: 20px;
+}
+
+.scalloped-edge::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background:
+    radial-gradient(circle at 10px 10px, transparent 8px, #FFB6C1 8px, #FFB6C1 12px, transparent 12px),
+    radial-gradient(circle at 30px 10px, transparent 8px, #DDA0DD 8px, #DDA0DD 12px, transparent 12px),
+    radial-gradient(circle at 50px 10px, transparent 8px, #98FB98 8px, #98FB98 12px, transparent 12px);
+  background-size: 40px 20px;
+  background-repeat: repeat-x;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.kawaii-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(255, 192, 203, 0.4) 0%, transparent 40%),
+    radial-gradient(circle at 60% 70%, rgba(255, 182, 193, 0.2) 0%, transparent 60%);
+}
+
+/* Kawaii Clouds */
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  opacity: 0.8;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+}
+
+.cloud-1 {
+  width: 80px;
+  height: 40px;
+  top: 10%;
+  left: 10%;
+  animation: float-cloud 20s ease-in-out infinite;
+}
+
+.cloud-1::before {
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 10px;
+}
+
+.cloud-1::after {
+  width: 60px;
+  height: 40px;
+  top: -15px;
+  right: 10px;
+}
+
+.cloud-2 {
+  width: 60px;
+  height: 30px;
+  top: 60%;
+  right: 15%;
+  animation: float-cloud 25s ease-in-out infinite reverse;
+}
+
+.cloud-2::before {
+  width: 40px;
+  height: 40px;
+  top: -20px;
+  left: 8px;
+}
+
+.cloud-2::after {
+  width: 45px;
+  height: 30px;
+  top: -10px;
+  right: 8px;
+}
+
+/* Kawaii Stars */
+.star {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 6px solid rgba(255, 182, 193, 0.6);
+  transform: rotate(35deg);
+}
+
+.star::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: -4px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 6px solid rgba(255, 182, 193, 0.6);
+  transform: rotate(-70deg);
+}
+
+.star::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 2px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 6px solid rgba(255, 182, 193, 0.6);
+  transform: rotate(70deg);
+}
+
+.star-1 {
+  top: 15%;
+  left: 25%;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.star-2 {
+  top: 25%;
+  right: 30%;
+  animation: twinkle 4s ease-in-out infinite 1s;
+}
+
+.star-3 {
+  top: 45%;
+  left: 15%;
+  animation: twinkle 3.5s ease-in-out infinite 2s;
+}
+
+.star-4 {
+  top: 70%;
+  right: 20%;
+  animation: twinkle 4.5s ease-in-out infinite 0.5s;
+}
+
+.star-5 {
+  top: 80%;
+  left: 70%;
+  animation: twinkle 3s ease-in-out infinite 1.5s;
+}
+
+/* Plus/Cross Stars */
+.plus-star {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: rgba(255, 182, 193, 0.5);
+}
+
+.plus-star::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 2px;
+  height: 12px;
+  background: rgba(255, 182, 193, 0.5);
+}
+
+.plus-1 {
+  top: 35%;
+  left: 80%;
+  animation: twinkle 2.5s ease-in-out infinite;
+}
+
+.plus-2 {
+  top: 55%;
+  left: 5%;
+  animation: twinkle 3.2s ease-in-out infinite 1.2s;
+}
+
+.plus-3 {
+  top: 20%;
+  left: 60%;
+  animation: twinkle 2.8s ease-in-out infinite 0.8s;
+}
+
+/* Animations */
+@keyframes float-cloud {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(10px) translateY(-5px); }
+  50% { transform: translateX(-5px) translateY(-10px); }
+  75% { transform: translateX(5px) translateY(-5px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Kawaii Typography */
+.kawaii-text {
+  font-family: 'Comfortaa', 'Fredoka', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.kawaii-title {
+  font-family: 'Fredoka', 'Comfortaa', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.kawaii-button {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+/* Ensure kawaii background covers all screens */
+.screen-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.screen-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #FFE4F0 0%, #F8E8FF 50%, #FFE4F0 100%);
+  z-index: -2;
+}
+
+/* Anime Utility Classes */
+.animate-float {
+  animation: animeFloat 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: animeGlow 2s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Kawaii hover effects */
+.kawaii-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glass Morphism Effects */
+.glass-button {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-button:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.2) 100%);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Glass Gradient Option Buttons - Pure Pink Glass Morphism */
+.glass-gradient-option {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.9) 0%, rgba(244, 114, 182, 0.7) 25%, rgba(251, 207, 232, 0.6) 50%, rgba(244, 114, 182, 0.7) 75%, rgba(236, 72, 153, 0.9) 100%) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(236, 72, 153, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.4), 0 4px 16px rgba(244, 114, 182, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.glass-gradient-option:hover {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 1) 0%, rgba(244, 114, 182, 0.8) 25%, rgba(251, 207, 232, 0.7) 50%, rgba(244, 114, 182, 0.8) 75%, rgba(236, 72, 153, 1) 100%) !important;
+  box-shadow: 0 16px 40px rgba(236, 72, 153, 0.6), 0 8px 20px rgba(244, 114, 182, 0.5) !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  filter: brightness(1.15) saturate(1.1) !important;
+}
+
+/* Force text sizes to override any conflicts */
+.question-text-override {
+  font-size: 16px !important;
+  font-family: 'Bubblegum Sans', 'Kalam', 'Fredoka', sans-serif !important;
+  font-weight: bold !important;
+  color: #4A5568 !important;
+}
+
+.option-text-override {
+  font-size: 16px !important;
+  font-family: 'Bubblegum Sans', 'Kalam', 'Fredoka', sans-serif !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+
+.chibi-size-override {
+  width: 100px !important;
+  height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
+  min-width: 100px !important;
+  min-height: 100px !important;
+}
+
+/* Kawaii Scalloped Borders */
+.kawaii-scalloped-border {
+  position: relative;
+  background: linear-gradient(135deg, rgba(252, 231, 243, 0.95) 0%, rgba(251, 207, 232, 0.9) 100%);
+  border-radius: 45px;
+  box-shadow:
+    0 20px 40px rgba(236, 72, 153, 0.15),
+    0 8px 16px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  contain: layout style;
+}
+
+.kawaii-scalloped-border::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background:
+    radial-gradient(circle at 20px 20px, #FFB6C1 8px, transparent 8px),
+    radial-gradient(circle at 60px 20px, #DDA0DD 8px, transparent 8px),
+    radial-gradient(circle at 100px 20px, #98FB98 8px, transparent 8px),
+    radial-gradient(circle at 140px 20px, #F0E68C 8px, transparent 8px);
+  background-size: 40px 40px;
+  background-repeat: repeat;
+  border-radius: 35px;
+  z-index: -1;
+  opacity: 0.6;
+  animation: kawaii-border-shimmer 4s ease-in-out infinite;
+}
+
+.kawaii-scalloped-border::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 30%, transparent 70%);
+  border-radius: 50%;
+  animation: kawaii-sparkle-shine 3s ease-in-out infinite;
+}
+
+@keyframes kawaii-border-shimmer {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+@keyframes kawaii-sparkle-shine {
+  0%, 100% { opacity: 0.3; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.3) rotate(180deg); }
+}
+
+/* Cloud-like soft borders */
+.kawaii-cloud-border {
+  border-radius: 50px 20px 50px 20px;
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(221, 160, 221, 0.8));
+  box-shadow:
+    0 15px 35px rgba(255, 182, 193, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.1),
+    inset 0 2px 5px rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.kawaii-cloud-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.3) 20%, transparent 20%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.2) 15%, transparent 15%);
+  animation: kawaii-cloud-float 6s ease-in-out infinite;
+}
+
+@keyframes kawaii-cloud-float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(10px, -5px) rotate(1deg); }
+  66% { transform: translate(-5px, 5px) rotate(-1deg); }
+}
+
+/* Emotional Button States */
+.kawaii-button-emotional {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.kawaii-button-emotional::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.4), transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease-out;
+  z-index: 0;
+}
+
+/* Blush effect on hover */
+.kawaii-button-emotional:hover::before {
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.3) 50%, transparent 70%);
+}
+
+/* Excited shake animation */
+.kawaii-button-excited {
+  animation: kawaii-excited-shake 0.5s ease-in-out;
+}
+
+@keyframes kawaii-excited-shake {
+  0%, 100% { transform: translateX(0); }
+  10% { transform: translateX(-2px) rotate(-0.5deg); }
+  20% { transform: translateX(2px) rotate(0.5deg); }
+  30% { transform: translateX(-2px) rotate(-0.5deg); }
+  40% { transform: translateX(2px) rotate(0.5deg); }
+  50% { transform: translateX(-1px) rotate(-0.25deg); }
+  60% { transform: translateX(1px) rotate(0.25deg); }
+  70% { transform: translateX(-1px) rotate(-0.25deg); }
+  80% { transform: translateX(1px) rotate(0.25deg); }
+  90% { transform: translateX(0) rotate(0deg); }
+}
+
+/* Progressive reveal animation */
+.kawaii-progressive-reveal {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  animation: kawaii-reveal-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes kawaii-reveal-bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Magnetic cursor effect */
+.kawaii-magnetic {
+  transition: transform 0.2s ease-out;
+}
+
+.kawaii-magnetic:hover {
+  transform: scale(1.02);
+}
+
+/* Heartbeat animation for active elements - DISABLED */
+.kawaii-heartbeat {
+  position: relative; /* Keep class but remove animation */
+}
+
+@keyframes kawaii-heartbeat-pulse {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.02); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.02); }
+  70% { transform: scale(1); }
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(252, 231, 243, 0.95) 0%, rgba(251, 207, 232, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(236, 72, 153, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Anime-Style Iconography */
+.anime-bullet {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  position: relative;
+}
+
+.anime-bullet.star {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.anime-bullet.heart {
+  background: linear-gradient(45deg, #FF69B4, #FF1493);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  transform: rotate(-45deg);
+  animation: heart-pulse 1.5s ease-in-out infinite;
+}
+
+.anime-bullet.heart::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(45deg, #FF69B4, #FF1493);
+  border-radius: 50%;
+  top: -8px;
+  left: 0;
+}
+
+.anime-bullet.heart::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(45deg, #FF69B4, #FF1493);
+  border-radius: 50%;
+  top: 0;
+  left: 8px;
+}
+
+.anime-bullet.eyes {
+  background: #FFF;
+  border-radius: 50%;
+  border: 2px solid #333;
+  position: relative;
+}
+
+.anime-bullet.eyes::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #333;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: blink 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.7; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes heart-pulse {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.1); }
+}
+
+@keyframes blink {
+  0%, 90%, 100% { opacity: 1; }
+  95% { opacity: 0; }
+}
+
+.kawaii-hover:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.1);
+}
+
+/* Soft kawaii borders */
+.kawaii-border {
+  border: 2px solid rgba(255, 182, 193, 0.4);
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.2);
+}
+
+.kawaii-border-purple {
+  border: 2px solid rgba(167, 139, 250, 0.4);
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 640px) {
+  .kawaii-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+  }
+
+  .kawaii-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .kawaii-button {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+}

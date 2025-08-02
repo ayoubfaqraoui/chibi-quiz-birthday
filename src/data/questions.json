@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question": "What's your favorite childhood TV series?",
+    "options": [
+      "Harry Potter",
+      "Romana O Brtal",
+      "The Hobbit",
+      "Star Wars"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "harry-potter-style.png",
+    "questionPose": "36.png"
+  },
+  {
+    "id": 2,
+    "question": "What's your favorite street food?",
+    "options": [
+      "Sushi",
+      "Tacos",
+      "Pizza",
+      "L7archa"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "eating-sushi.png",
+    "questionPose": "37.png"
+  },
+  {
+    "id": 3,
+    "question": "What do you love doing the most on your days off?",
+    "options": [
+      "Sleep all day",
+      "Binge-watch anime",
+      "Do absolutely nothing",
+      "Avoid humans"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "cool-confident.png",
+    "questionPose": "38.png"
+  },
+  {
+    "id": 4,
+    "question": "How long does your shower usually take?",
+    "options": [
+      "3 hours",
+      "10 minutes",
+      "Depends on the mood",
+      "Until the hot water runs out"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "angry-crying.png",
+    "questionPose": "39.png"
+  },
+  {
+    "id": 5,
+    "question": "What do you usually do when you have a headache?",
+    "options": [
+      "Drink water",
+      "Complain loudly",
+      "Pretend it doesn't exist and sleep",
+      "Google symptoms until convinced you're dying"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "handshake-agreement.png",
+    "questionPose": "40.png"
+  },
+  {
+    "id": 6,
+    "question": "What's your favorite type of coffee?",
+    "options": [
+      "Iced coffee",
+      "Normal",
+      "Cappuccino",
+      "Whatever wakes me up"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "drinking-ice-coffee.png",
+    "questionPose": "41.png"
+  },
+  {
+    "id": 7,
+    "question": "What do you like to do when you want to chill?",
+    "options": [
+      "Drink a beer",
+      "Scroll in TikTok",
+      "Listen to music",
+      "Ignore messages and think about your existential philosophy"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "drinking-beer_and-chill.png",
+    "questionPose": "42.png"
+  },
+  {
+    "id": 8,
+    "question": "What are you allergic to?",
+    "options": [
+      "Coconut",
+      "Mornings",
+      "Cock",
+      "Human interaction"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "wink-thumbs-up.png",
+    "questionPose": "43.png"
+  },
+  {
+    "id": 9,
+    "question": "How do you stop your mind from streaming thoughts?",
+    "options": [
+      "Smoke a joint",
+      "Sleep",
+      "Rewatch Harry Potter",
+      "Open the fridge, stare inside, forget why you're there"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "smoking-unbothered.png",
+    "questionPose": "36.png"
+  },
+  {
+    "id": 10,
+    "question": "What's a necessary decor in your future house?",
+    "options": [
+      "Cats",
+      "Rope",
+      "Animals nonosat",
+      "A robotic vacuum that automatically cleans your room"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "in-love-star-eyes.png",
+    "questionPose": "37.png"
+  },
+  {
+    "id": 11,
+    "question": "How many days per month do you feel like killing yourself?",
+    "options": [
+      "10 days",
+      "All of them",
+      "Just Mondays",
+      "Only when awake"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "angry-frustrated.png",
+    "questionPose": "38.png"
+  },
+  {
+    "id": 12,
+    "question": "Who's your current favorite anime character?",
+    "options": [
+      "Sung Jin-woo",
+      "Monkey D.Luffy",
+      "Eren Yeager",
+      "Gojo Satoru"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "blushing-cute.png",
+    "questionPose": "39.png"
+  },
+  {
+    "id": 13,
+    "question": "What's your favorite summer activity?",
+    "options": [
+      "Go to the beach and get a tan",
+      "Complain about the heat",
+      "Eat ice cream",
+      "Go to job"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "celebrating-excited.png",
+    "questionPose": "40.png"
+  },
+  {
+    "id": 14,
+    "question": "Which artist shares your birthday?",
+    "options": [
+      "Charli XCX",
+      "Sofia Isella",
+      "Raye",
+      "Billie Eilish"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "shocked-face.png",
+    "questionPose": "41.png"
+  },
+  {
+    "id": 15,
+    "question": "Which song represents you?",
+    "options": [
+      "Hi Ren",
+      "Half a man",
+      "Creep",
+      "Dog's dinner"
+    ],
+    "correctAnswer": 0,
+    "explanation": "",
+    "celebrationSticker": "listening-to-music.png",
+    "questionPose": "42.png"
+  }
+]
